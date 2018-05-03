@@ -16,7 +16,7 @@ pipeline {
         sh 'scp -p root@$target_cluster:/tmp/Thumbnails/*.xml .'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         junit(testResults: '*.xml', healthScaleFactor: 1, allowEmptyResults: true)
       }
